@@ -1,0 +1,66 @@
+/**
+ * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// Include theme-specific fonts
+@import url(./fonts/source-sans-pro/source-sans-pro.css);
+
+// Override theme settings (see ../template/settings.scss)
+
+body:after {
+  content: url(../../images/logo2.png);
+  position: fixed;
+  top: 2em;
+  right: 2em;
+  background-size: 20%;
+}
+
+.kabisa-dark-header {
+  color: #60beba !important;
+}
+
+.kabisa-light-header {
+  color: #2e3037 !important;
+}
+
+.new-bullet {
+  color: #60beba !important;
+  font-size: 1.5em;
+}
+
+$kabisa-light: #60beba;
+$kabisa-dark: #2e3037;
+
+$mainColor: #fff;
+$headingColor: #fff;
+$backgroundColor: $kabisa-dark;
+
+$mainFontSize: 42px;
+$mainFont: "Quicksand", Helvetica, sans-serif;
+$headingFont: "Quicksand", Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #42affa;
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1em;
+
+// Change text colors against light slide backgrounds
+@include light-bg-text-color(#222);
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
